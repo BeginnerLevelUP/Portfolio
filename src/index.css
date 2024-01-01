@@ -1,0 +1,452 @@
+* {
+    text-align: center;
+    transition: 1s;
+    font-family: var(--regFont);
+
+}
+
+/* Body and colors */
+:root {
+    --primary: #4dbbfb;
+    --secondary: #fba686;
+    --accent: #006064;
+    --background: #D8D8D8;
+    --textColor: #333333;
+    --regFont: 'Montserrat', sans-serif;
+    --headFont: 'Bebas Neue', sans-serif;
+    --listFont: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+
+/* Styling for the header */
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    /* create some logic that makes then postion fixed when you scroll ddown dont forget to adjust the media queires only for desktop version */
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--textColor);
+    background-color: var(--secondary);
+    width: fit-content;
+    height: fit-content;
+    font-family: var(--headFont);
+}
+
+header ul {
+    margin: 5% 10px;
+}
+
+nav li {
+    color:black;
+    display: inline;
+    margin: 0 10px;
+    border-bottom: 2.5px solid var(--textColor);
+    padding: 5px auto;
+    font-family: var(--listFont);
+
+}
+
+nav li:hover {
+    text-decoration: none;
+    background-color: var(--accent);
+    border: 1px solid white;
+}
+
+nav a,
+nav a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Styling for the HERO */
+.hero {
+    height: 450px;
+    background-image: url(hero.jpeg);
+    background-size: cover;
+}
+
+.hero p {
+    visibility: hidden;
+}
+
+.hero p::after {
+    position: relative;
+    top: 75px;
+    background-color: var(--secondary)
+}
+
+article p::after,
+.hero p::after {
+    content: "I am a beginner Web Developer that is eagerly looking for hands-on experience in the field. Well experienced in HTML, CSS, JavaScript (familiar with frameworks such as Bootstrap, jQuery/UI, Handlebars, React, Express). Although I am a beginner, my knowledge and commitment are ever-expanding. I am used to communicating and working in teams through my use of GitHub, Slack, Discord, and Stack Overflow. As for the backend, I am familiar with the Express npm package. In terms of database management, I am familiar with SQL and NoSQL languages such as ORM Sequelize (SQL knowledge included) and the ODM Mongoose (MongoDB knowledge included), etc. Additional skills would include Adobe Premiere Pro and Photoshop, Google Docs, and Spreadsheets.";
+    margin-left: 20px;
+    color: var(--textColor);
+    white-space: pre-wrap;
+  
+}
+/* Styling the section tags so they are aligned properly*/
+
+section {
+    justify-content: space-evenly;
+    display: flex;
+    margin: 5% 0%;
+}
+
+section h2 {
+    font-family: var(--headFont);
+    color: var(--textColor);
+    font-size: 2rem;
+    padding: 10px;
+}
+
+section aside {
+    border-right: 5px solid var(--secondary);
+}
+
+/* Styling for projects */
+#container-grid div {
+    filter: brightness(50%)
+}
+
+#container-grid div:hover {
+    filter: brightness(100%)
+}
+
+#container-grid .projects .title,
+#container-grid .FULLSTACK .title,
+#carouselExampleFade .projects .title,
+#carouselExampleFade .FULLSTACK .title {
+    background-color: #343434;
+    height: 80px;
+    width: 200px;
+    position: relative;
+    bottom: -30%;
+}
+
+#container-grid .FULLSTACK .title {
+    bottom: -50%;
+}
+
+#container-grid .title:hover,
+#carouselExampleFade .title:hover {
+    width: 280px;
+}
+
+/* Styling for the footer */
+footer li {
+    margin: auto 80px;
+}
+
+/* styling for the work section*/
+#container-grid {
+    display: grid;
+    grid-template-areas:
+        "fullstack fullstack "
+    ;
+    grid-template-rows: 500px repeat(2, 200px);
+    grid-template-columns: 500px 500px;
+    gap: 10px;
+}
+
+.projects,
+.FULLSTACK {
+    background-color: #40806a;
+}
+
+.FULLSTACK {
+    grid-area: fullstack;
+}
+
+.title:hover,
+#carouselExampleFade .title:hover {
+    opacity: .95;
+}
+
+.title p {
+    color: white;
+    padding: 15% 0;
+}
+
+.title p:hover {
+    padding: 10% 0;
+}
+
+.FULLSTACK img {
+    transition: 0s;
+    width: 400px;
+}
+
+.projects img {
+    position: relative;
+    bottom: 80px;
+    left: 80px;
+    transition: 0s;
+    width: 200px;
+    height: 200px;
+
+}
+
+#carouselExampleFade .projects img {
+    transition: 0s;
+    width: 400px;
+    height: 400px;
+
+}
+
+.FULLSTACK a,
+.projects a {
+    text-decoration: none;
+}
+
+.FULLSTACK img,
+.projects img {
+    z-index: -1;
+}
+
+/* The Carousel Coding */
+
+#carouselExampleFade {
+    display: none;
+}
+
+#carouselExampleFade div {
+    width: 1050px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+#carouselExampleFade .projects .title,
+#carouselExampleFade .FULLSTACK .title {
+    bottom: -45%
+}
+
+/* Escape Button for tablet and phone view */
+.escape {
+    display: none;
+    margin: 0 auto
+}
+
+
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+
+    #container-grid .projects .title,
+    #container-grid .FULLSTACK .title {
+        width: 150px;
+    }
+
+    #container-grid .title:hover {
+        width: 200px;
+    }
+
+    #container-grid .projects img {
+        top: -50px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-left: 65%;
+    }
+
+    .work aside {
+        display: block;
+    }
+
+    .hero {
+        margin: 20px;
+        height: 250px;
+    }
+
+    .hero p {
+        visibility: inherit;
+    }
+
+    .about {
+        display: none;
+    }
+
+    section {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    section aside {
+        width: fit-content;
+        border-right: none;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        border-bottom: 2.5px solid var(--secondary);
+        ;
+        padding: auto 10px;
+        border-right: none;
+    }
+
+    #container-grid {
+        display: grid;
+        grid-template-areas:
+            "fullstack "
+            "fullstack "
+            "fullstack "
+            "fullstack"
+        ;
+        grid-template-rows: 150px repeat(3, 150px);
+        grid-template-columns: 500px 310px;
+        gap: 20px;
+        margin: auto 10px;
+    }
+
+    .FULLSTACK {
+        grid-area: fullstack;
+    }
+
+    nav li {
+        background-color: var(--accent);
+        border: 2.5px solid var(--textColor);
+    }
+
+    #carouselExampleFade div {
+        width: 800px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    #carouselExampleFade .projects .title,
+    #carouselExampleFade .FULLSTACK .title {
+        bottom: -45%
+    }
+
+    .projects img {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        transition: 0s;
+        width: 200px;
+        height: 200px;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #container-grid .projects .title,
+    #container-grid .FULLSTACK .title {
+        width: 100px;
+    }
+
+    #container-grid .title:hover {
+        width: 150px;
+    }
+
+    #container-grid .projects img {
+        left: 80px;
+        top: -30px;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-left: 5%;
+    }
+
+    .FULLSTACK img {
+        width: 200px;
+    }
+
+    #carouselExampleFade .FULLSTACK img,
+    #carouselExampleFade .title img {
+        margin-top: 30%;
+    }
+
+    .work aside {
+        display: block;
+    }
+
+    body {
+        background-color: var(--background);
+        /* change to blurred background image */
+    }
+
+    .hero {
+        display: none;
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section aside {
+        margin-left: 40%;
+        width: fit-content;
+        border: none;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        border-right: none;
+        border-bottom: 2.5px solid var(--secondary);
+        ;
+    }
+
+    nav li {
+        background-color: var(--accent);
+        border: 2.5px solid var(--textColor);
+        display: block;
+        margin: 10px;
+    }
+
+    header h1 {
+        margin-top: 25px;
+    }
+
+    #container-grid {
+        display: grid;
+        grid-template-areas:
+            "fullstack"
+        ;
+        grid-template-rows: 350px repeat(4, 200px);
+        grid-template-columns: 280px;
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .FULLSTACK {
+        grid-area: fullstack;
+    }
+
+    #carouselExampleFade div {
+        width: 400px;
+        height: 600px;
+        margin: 0 auto;
+    }
+
+    #carouselExampleFade .projects .title,
+    #carouselExampleFade .FULLSTACK .title {
+        bottom: -45%
+    }
+
+    .projects img {
+        position: relative;
+        bottom: 0px;
+        left: 80px;
+        transition: 0s;
+        width: 200px;
+        height: 200px;
+
+    }
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    margin-left:25%
+}
