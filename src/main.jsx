@@ -7,9 +7,9 @@ import './index.css'
 
 //Pages
 import AboutMePage from './pages/AboutMePage.jsx';
-import ContactPage from './pages/contactPage.jsx';
+import ContactPage from './pages/ContactPage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx';
-import ResumePage from './pages/resumePage.jsx';
+import ResumePage from './pages/ResumePage.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 
 //Routes
