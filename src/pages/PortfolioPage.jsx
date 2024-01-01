@@ -14,7 +14,7 @@ function PortfolioPage() {
             <div className="title">
               <p>Season Sales Catalog</p>
             </div>
-            <img src="../../public/catalog.png"  />
+            <img src="/catalog.png"  />
           </a>
         </div>
 
@@ -24,7 +24,7 @@ function PortfolioPage() {
             <div className="title">
               <p>Password<br />Generator</p>
             </div>
-            <img src="../../public/passwordGen.png" alt="Password Generator" />
+            <img src="/passwordGen.png" alt="Password Generator" />
           </a>
         </div>
 
@@ -35,7 +35,7 @@ function PortfolioPage() {
             <div className="title">
               <p>Trading Card Game</p>
             </div>
-            <img src="../../public/tradingCard.png" alt="Project 3 Image" />
+            <img src="/tradingCard.png" alt="Project 3 Image" />
           </a>
         </div>
 
@@ -45,7 +45,7 @@ function PortfolioPage() {
             <div className="title">
               <p>Project 4 Name</p>
             </div>
-            <img src="project4_image.png" alt="Project 4 Image" />
+            <img src="/notYet.png" alt="Project 4 Image" />
           </a>
         </div>
 
@@ -55,7 +55,7 @@ function PortfolioPage() {
             <div className="title">
               <p>Project 5 Name</p>
             </div>
-            <img src="project5_image.png" alt="Project 5 Image" />
+            <img src="/notYet.png" alt="Project 5 Image" />
           </a>
         </div>
 

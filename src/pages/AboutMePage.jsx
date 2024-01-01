@@ -7,7 +7,7 @@ function AboutMePage() {
     
                 <article>
                     <p> </p>
-                          <img src="../../public/profile.png"  />
+                          <img src="/profile.png"  />
                 </article>
 
             </section>
